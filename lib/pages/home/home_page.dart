@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:santander/services/api.dart';
+import 'package:santander/widgets/info_card.dart';
+import '../../widgets/card.dart';
 import '../../shared/app_colors.dart';
 import '../../shared/app_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/user_model.dart';
-import 'package:santander/shared/app_settings.dart';
-
 import '../../widgets/features.dart';
 import '../../widgets/header.dart';
 
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return user == null ? Scaffold(
+    return user == null ? const Scaffold(
       body: Center(
         child:
         CircularProgressIndicator(),
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           Container(
-              margin: EdgeInsets.only(right: 8),
+              margin: const EdgeInsets.only(right: 8),
               child: SvgPicture.asset(
                 AppImages.notification,
                 height: 24,
@@ -67,6 +67,14 @@ class _HomePageState extends State<HomePage> {
             height: 200,
           ),
           FeaturesWidget(features: user!.features!),
+          const SizedBox(
+            height: 10,
+            ),
+          CardWidget(card: user!.card!),
+          const SizedBox(
+            height: 10,
+            ),
+            InfoCardsWidget(news: user!.news!),
         ],
       ),
     );

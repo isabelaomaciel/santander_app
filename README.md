@@ -1,7 +1,8 @@
-# santander
+# santander_app
 
-A new Flutter project.
 
+This repository contains my solution for DIO open source Santander Dev Week 2023.
+ 
 ## Getting Started
 
 This project is a starting point for a Flutter application.

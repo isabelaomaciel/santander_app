@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/feature.dart';
 import '../shared/app_settings.dart';
 import 'package:flutter_svg/svg.dart';
-import '../models/feature.dart';
 import '../shared/app_colors.dart';
 
 class FeaturesWidget extends StatefulWidget {
@@ -36,7 +35,7 @@ class _FeatureWidgetState extends State<FeaturesWidget> {
               width: 36,
               height: 36,
             ),
-             SizedBox(
+             const SizedBox(
               height:  16,
             ),
             Text(

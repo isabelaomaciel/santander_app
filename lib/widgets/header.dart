@@ -16,7 +16,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
       height: AppSettings.screenHeight / 5,
       width: AppSettings.screenWidth,
       color: AppColors.red,
@@ -25,12 +25,12 @@ class _HeaderWidgetState extends State<HeaderWidget> {
         children: [
           Text(
             "Olá, ${widget.user.name}",
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white),
           ),
           Text(
             "Ag ${widget.user.account!.agency!} CC ${widget.user.account!.number!}",
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white),
           ),
         ],
